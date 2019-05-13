@@ -1,10 +1,9 @@
 module Api
   module V1
-    class UsersController < ApplicationController
-        
-      def index
-          users = User.all
-          render json: { data:users } ,status: :ok
+    class UsersController < ApplicationController   
+			def index
+					users = User.getAll
+          render json: { data:users } ,status: :ok\
       end
 
       def show
